@@ -13,8 +13,10 @@ export default function BookCard({book}) {
             <img src={getBookCover(book)} alt={book.title} />
             <h2>{book.title}</h2>
             <p>First published: {book.first_publish_year}</p>
-            <p>Author: {book.author_name && book.author_name.join(', ')}</p>
-            <a href={`https://www.amazon.com/s?k=${book.title}`} target="_blank">Search on Amazon</a>
+            <p>Author: {book.author_name}</p>
+            <p>Average rating: {book.ratings_average}</p>
+            <a href={`https://www.amazon.com/s?k=${book.isbn && book.isbn[0]}`} target="_blank" rel="noopener noreferrer">Search on Amazon</a>
+
         </article>
     )
 }
