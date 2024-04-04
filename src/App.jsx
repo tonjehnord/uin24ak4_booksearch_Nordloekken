@@ -53,7 +53,7 @@ function App() {
 
   return (
     <>
-      <Layout>
+      <Layout handleSubmit={handleSubmit} searchTerm={searchTerm} handleChange={handleChange}>
         {searchResults.length > 0 ? (
           <SearchResults books={searchResults} />
         ) : (
